@@ -9,5 +9,5 @@ The app should render as following:
 <div><img src="mobile.png" alt="mobile" width="300"/></div>
 
 <div>WebApp</div>
-<div><img src="webapp.png" alt="webapp" width="500"/></div>
+<div><img src="webapp.png" alt="webapp" width="600"/></div>
 
