@@ -6,7 +6,8 @@
 
 The app should render as following:
 Mobile
-<img src="mobile.png" alt="mobile" width="300"/>
-![Mobile](./mobile.png?raw=true "mobile")
+<div><img src="mobile.png" alt="mobile" width="300"/></div>
+
 WebApp
-![Webapp](./webapp.png?raw=true "webapp")
+<div><img src="webapp.png" alt="webapp" width="300"/></div>
+
