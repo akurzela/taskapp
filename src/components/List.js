@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Form } from './Form';
 import { Todo } from './Todo';
+import { Heading, Card, ScrollView } from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
 export const List = () => {
   const [todos, setTodos] = useState([]);
@@ -25,14 +27,18 @@ export const List = () => {
 
 
   return (
-    <>
-      <h1>List of Todos</h1>
-      <Form onSubmit={addTodo} />
-      <Todo
-        todos={todos}
-        removeTodo={removeTodo}
-      />
-    </>
+    <div id="app">
+      < div id="header" > <Heading level={2}>List of Todos</Heading></div >
+      <div className="main-card">
+        <Card variation="elevated">
+          <Form onSubmit={addTodo} />
+          <ScrollView maxWidth="100%"><Todo
+            todos={todos}
+            removeTodo={removeTodo} /></ScrollView>
+        </Card>
+      </div>
+    </div>
+
   );
 }
 

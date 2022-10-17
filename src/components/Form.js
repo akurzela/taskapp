@@ -1,4 +1,12 @@
 import React, { useState, /*useEffect,*/ useRef } from 'react';
+import {
+  TextField,
+  SelectField,
+  Button,
+  TextAreaField,
+  Text
+} from '@aws-amplify/ui-react';
+import '@aws-amplify/ui-react/styles.css';
 
 export const Form = (props) => {
   const [input, setInput] = useState('');
@@ -45,41 +53,55 @@ export const Form = (props) => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='todo-form'>
-      <>
-        <input
-          placeholder='Add name'
+    <form onSubmit={handleSubmit}>
+      <div className="input-fields">
+        <TextField
+          label={<Text
+            fontWeight='bold'
+            fontSize='large'
+          >
+            Name
+          </Text>}
+          placeholder='Add a name'
           value={input}
           onChange={handleNameChange}
-          name='text'
-          className='todo-input'
+          name='name'
           ref={inputRef}
+          variation="primary"
         />
-        <input
-          placeholder='Add description'
+        <TextAreaField
+          label={<Text
+            fontWeight='bold'
+            fontSize='large'
+          >
+            Description
+          </Text>}
+          placeholder='Add a description'
           value={description}
           onChange={handleDescriptionChange}
           name='description'
-          className='todo-input'
           ref={inputRef}
+          variation="primary"
         />
-        <select name="priority" id="priority" value={priority} onChange={handlePriorityChange} ref={inputRef}>
+      </div>
+      <section>
+        <SelectField label={<Text fontWeight='bold' fontSize='large'> Priority </Text>} name="priority" id="priority" value={priority} onChange={handlePriorityChange} ref={inputRef}>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
           <option value="4">4</option>
           <option value="5">5</option>
-        </select>
-        <select name="status" id="status" value={status} onChange={handleStatusChange} ref={inputRef}>
+        </SelectField>
+        <SelectField label={<Text fontWeight='bold' fontSize='large'> PrioStatusrity </Text>} name="status" id="status" value={status} onChange={handleStatusChange} ref={inputRef}>
           <option value="active">Active</option>
           <option value="inactive">Inactive</option>
           <option value="onHold">On Hold</option>
-        </select>
-        <button onClick={handleSubmit} className='todo-button'>
-          Add todo
-        </button>
-      </>
-    </form>
+        </SelectField>
+      </section>
+      <Button className="colorful-button" margin="5px" onClick={handleSubmit} >
+        Add todos
+      </Button>
+    </form >
   );
 }
 

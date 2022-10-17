@@ -1,13 +1,30 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root,
+[data-amplify-theme] {
+  --amplify-linear: linear-gradient(90deg, #fdbb2d 0%, #22c1c3 100%)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+#app {
+  margin: 2% 2%;
+}
+
+.main-card {
+  max-height: 40%;
+}
+
+#header {
+  background: var(--amplify-linear);
+  height: 60px;
+  text-align: center;
+}
+
+form {
+  margin: 1% 5%;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin: 5px;
 }
