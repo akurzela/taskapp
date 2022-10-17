@@ -16,14 +16,3 @@ The app should render as following:
     <td><img src="webapp.png" alt="webapp" width="600"/></td>
  </tr>
 </table>
-
-
-
-
-
-<div>Mobile</div>
-<div><img src="mobile.png" alt="mobile" width="300"/></div>
-
-<div>WebApp</div>
-<div><img src="webapp.png" alt="webapp" width="600"/></div>
-
