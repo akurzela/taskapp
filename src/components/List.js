@@ -28,7 +28,7 @@ export const List = () => {
 
   return (
     <div id="app">
-      < div id="header" > <Heading level={2}>List of Todos</Heading></div >
+      < div id="header" > <Heading level={2}>My Todos</Heading></div >
       <div className="main-card">
         <Card variation="elevated">
           <Form onSubmit={addTodo} />

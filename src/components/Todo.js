@@ -13,6 +13,7 @@ export const Todo = ({ todos, removeTodo }) => {
 
   return (
     <Table
+      textAlign="left"
       size="small"
       caption=""
       highlightOnHover={false}>

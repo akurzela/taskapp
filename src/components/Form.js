@@ -54,51 +54,47 @@ export const Form = (props) => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div className="input-fields">
-        <TextField
-          label={<Text
-            fontWeight='bold'
-            fontSize='large'
-          >
-            Name
-          </Text>}
-          placeholder='Add a name'
-          value={input}
-          onChange={handleNameChange}
-          name='name'
-          ref={inputRef}
-          variation="primary"
-        />
-        <TextAreaField
-          label={<Text
-            fontWeight='bold'
-            fontSize='large'
-          >
-            Description
-          </Text>}
-          placeholder='Add a description'
-          value={description}
-          onChange={handleDescriptionChange}
-          name='description'
-          ref={inputRef}
-          variation="primary"
-        />
-      </div>
-      <section>
-        <SelectField label={<Text fontWeight='bold' fontSize='large'> Priority </Text>} name="priority" id="priority" value={priority} onChange={handlePriorityChange} ref={inputRef}>
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </SelectField>
-        <SelectField label={<Text fontWeight='bold' fontSize='large'> PrioStatusrity </Text>} name="status" id="status" value={status} onChange={handleStatusChange} ref={inputRef}>
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
-          <option value="onHold">On Hold</option>
-        </SelectField>
-      </section>
-      <Button className="colorful-button" margin="5px" onClick={handleSubmit} >
+      <TextField
+        label={<Text
+          fontWeight='bold'
+          fontSize='large'
+        >
+          Name
+        </Text>}
+        placeholder='Add a name'
+        value={input}
+        onChange={handleNameChange}
+        name='name'
+        ref={inputRef}
+        variation="primary"
+      />
+      <TextAreaField
+        label={<Text
+          fontWeight='bold'
+          fontSize='large'
+        >
+          Description
+        </Text>}
+        placeholder='Add a description'
+        value={description}
+        onChange={handleDescriptionChange}
+        name='description'
+        ref={inputRef}
+        variation="primary"
+      />
+      <SelectField label={<Text fontWeight='bold' fontSize='large'> Priority </Text>} name="priority" id="priority" value={priority} onChange={handlePriorityChange} ref={inputRef}>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+      </SelectField>
+      <SelectField label={<Text fontWeight='bold' fontSize='large'> Status </Text>} name="status" id="status" value={status} onChange={handleStatusChange} ref={inputRef}>
+        <option value="active">Active</option>
+        <option value="inactive">Inactive</option>
+        <option value="onHold">On Hold</option>
+      </SelectField>
+      <Button className="button" margin="20px 0" isFullWidth={true} onClick={handleSubmit} >
         Add todos
       </Button>
     </form >

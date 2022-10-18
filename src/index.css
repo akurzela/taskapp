@@ -1,6 +1,6 @@
 :root,
 [data-amplify-theme] {
-  --amplify-linear: linear-gradient(90deg, #fdbb2d 0%, #22c1c3 100%)
+  --amplify-green: hsl(130, 43%, 46%);
 }
 
 #app {
@@ -12,19 +12,24 @@
 }
 
 #header {
-  background: var(--amplify-linear);
+  background: var(--amplify-green);
   height: 60px;
   text-align: center;
 }
 
 form {
-  margin: 1% 5%;
+  margin: 1% 27%;
+  text-align: left;
 }
 
-section {
+/* section {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
   margin: 5px;
+} */
+
+.button {
+  width: 100px;
 }
